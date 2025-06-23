@@ -6,9 +6,13 @@ import requests
 from sentence_transformers import SentenceTransformer, util
 
 # === Chemins ===
-DATA_PATH = "C:/Users/ZSMJ1267/Downloads/data_cleaned_fusion_concat.xlsx"
-EMB_PATH = "C:/Users/ZSMJ1267/Desktop/my-project/src/embedding.npy"
-MODEL_PATH = "C:/Users/ZSMJ1267/Desktop/all-MiniLM-L6-v2"
+# === Chemins relatifs au dossier du projet ===
+BASE_DIR = os.path.dirname(__file__)  # dossier où se trouve streamlit_app.py
+
+DATA_PATH = os.path.join(BASE_DIR, "data_cleaned_fusion_concat.xlsx")
+EMB_PATH = os.path.join(BASE_DIR, "embedding.npy")
+MODEL_PATH = os.path.join(BASE_DIR, "all-MiniLM-L6-v2")
+
 GEMINI_API_KEY = "AIzaSyAAv2LbIhkkk2gGVLJwTupjl5GMxHWVFNw"
 
 # === Chargement des données ===
